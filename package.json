@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/verdantpath/rest-api#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.20",
+    "morgan": "^1.7.0"
   }
 }
