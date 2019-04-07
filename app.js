@@ -24,6 +24,15 @@ db.once('open', function() {
 	console.log('db connection successful');
 });
 
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	if(req.method === 'OPTIONS') {
+		res.header('Access-Control-Allow-Methods');
+	}
+	next();
+});
+
 app.use('/questions', routes);
 
 // catch 404 and forward to error handler
